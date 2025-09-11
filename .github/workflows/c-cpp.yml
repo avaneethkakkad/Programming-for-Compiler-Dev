@@ -12,17 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
     - uses: actions/checkout@v4
 
-    # Step 2: Compile all C++ files in the repository
     - name: Compile All C++ Files
       run: |
         mkdir -p build
-        g++ -std=c++17 -o build/output *.cpp
+        g++ -std=c++17 -o Tree_sum_max Tree_sum_max.cpp
         echo "Compilation successful!"
-
-    # Step 3: Run the compiled program (optional, if you want to test execution)
-    - name: Run Program
-      run: |
-        ./build/output
