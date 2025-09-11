@@ -17,5 +17,5 @@ jobs:
     - name: Compile All C++ Files
       run: |
         mkdir -p build
-        g++ -std=c++17 -o Datastructures/Trees/Tree_sum_max Datastructures/Trees/Tree_sum_max.cpp
+        g++ -std=c++17 -o Datastructures/Trees/Tree_sum_max Datastructures/Trees/*.cpp
         echo "Compilation successful!"
