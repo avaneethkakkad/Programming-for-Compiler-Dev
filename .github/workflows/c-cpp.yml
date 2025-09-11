@@ -16,9 +16,13 @@ jobs:
 
     - name: Compile All C++ Files
       run: |
-        mkdir -p build
-        for file in Datastructures/Trees/*.cpp; 
-        do
-         g++ -std=c++17 -o "${file%.cpp}" "$file"
+        for file in Datastructures/Trees/*.cpp; do
+        executable="${file%.cpp}"
+        g++ -std=c++17 -o "$executable" "$file"
+        if [ $? -eq 0 ]; then
+        echo "Compiled $file successfully. Running $executable..."
+        ./"$executable"  # Execute the compiled file
+        else
+        echo "Failed to compile $file"
+        fi
         done
-        echo "Compilation successful!"
