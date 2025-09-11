@@ -1,0 +1,28 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - uses: actions/checkout@v4
+
+    # Step 2: Compile all C++ files in the repository
+    - name: Compile All C++ Files
+      run: |
+        mkdir -p build
+        g++ -std=c++17 -o build/output *.cpp
+        echo "Compilation successful!"
+
+    # Step 3: Run the compiled program (optional, if you want to test execution)
+    - name: Run Program
+      run: |
+        ./build/output
