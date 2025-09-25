@@ -1,0 +1,197 @@
+🗺️ ROADMAP: Writing Graph Optimizations in C++ from Basics (Compiler Role)
+🔰 PHASE 1: Master C++ (Weeks 1–2)
+
+Before doing any compiler-related work, you need solid C++ foundations.
+
+✅ Topics:
+
+Pointers & references
+
+Classes, inheritance, virtual functions
+
+Templates & STL
+
+RAII & Smart pointers
+
+Manual memory management (new/delete)
+
+Lambda functions
+
+📚 Resources:
+
+Book: C++ Primer by Lippman
+
+Online: cppreference.com
+
+Practice: Write small tools or parsers
+
+📊 PHASE 2: Learn Graph Theory & Algorithms (Weeks 3–5)
+
+This is essential — most compiler optimizations involve graph traversal.
+
+✅ Topics:
+
+Graph representations: adjacency list, matrix
+
+DFS/BFS
+
+Topological Sort
+
+SCC (Tarjan’s or Kosaraju’s)
+
+Dominator Trees (used in CFG)
+
+Dataflow Analysis
+
+Control Flow Graphs (CFG)
+
+Interference Graphs (for register allocation)
+
+📚 Resources:
+
+Book: Algorithm Design Manual – Steven Skiena
+
+Course: CS 161 (Stanford Algorithms)
+
+Visuals: https://visualgo.net
+
+⚙️ PHASE 3: Learn Compiler Basics (Weeks 6–9)
+
+Focus on how compilers work and how optimizations are structured.
+
+✅ Topics:
+
+Lexical analysis (tokenizing)
+
+Parsing (AST construction)
+
+IR (Intermediate Representation)
+
+SSA form (Static Single Assignment)
+
+Control Flow Graphs (CFG)
+
+Register allocation (graph coloring)
+
+Loop optimizations
+
+📚 Resources:
+
+Book: Modern Compiler Implementation in C – Appel
+
+Free Book: Engineering a Compiler – Keith Cooper
+
+MIT 6.035 Compiler Course (YouTube + lecture notes)
+
+🧠 PHASE 4: Work with LLVM (Weeks 10–15)
+
+LLVM is the industry standard for writing compiler optimizations. You’ll write graph-based passes here.
+
+✅ Goals:
+
+Build & compile LLVM
+
+Understand how to write a simple LLVM pass
+
+Learn IR (LLVM Intermediate Representation)
+
+Traverse and modify Control Flow Graphs (CFGs)
+
+Use LLVM’s DominatorTree, LoopInfo, Dataflow utilities
+
+📚 Resources:
+
+LLVM Official Tutorial
+
+LLVM Pass Development Tutorial (by Eli Bendersky)
+
+Book: LLVM Essentials
+
+Explore tools like opt, clang, and llc
+
+🧪 Project Ideas:
+
+Dead code elimination
+
+Constant folding
+
+Loop invariant code motion
+
+Value range propagation
+
+Custom optimization pass for IR
+
+🧮 PHASE 5: Deep Dive into Graph-Based Optimizations (Weeks 16–20)
+✅ Topics:
+
+Dataflow Analysis (live variable analysis, reaching definitions)
+
+Register Allocation using Graph Coloring
+
+Control Flow Graph Optimizations
+
+Loop optimizations (unrolling, fusion)
+
+SSA and Phi node resolution
+
+📚 Deep Resources:
+
+Advanced Compiler Design and Implementation – Steven Muchnick
+
+Compiler Explorer (godbolt.org) – See how C++ compiles at different levels
+
+🧪 PHASE 6: Projects & Practice (Weeks 21–24)
+
+This is key for interviews and practical understanding.
+
+✅ Project Ideas:
+
+Write your own mini compiler (frontend + backend)
+
+Implement register allocation using graph coloring
+
+Write LLVM passes for:
+
+Dead code elimination
+
+CFG simplification
+
+Loop strength reduction
+
+💡 Advanced:
+
+Work on an open-source compiler project (LLVM, GCC, Cranelift)
+
+Contribute to LLVM bug fixes or codegen passes
+
+📄 PHASE 7: Interview Prep (Ongoing)
+✅ Topics:
+
+C++ systems questions
+
+Compiler internals
+
+Memory layout
+
+Common optimizations
+
+LeetCode-style coding for graph problems
+
+Behavioral questions (explain a system you optimized, etc.)
+
+📚 Interview Resources:
+
+GitHub: nlohmann/awesome-compilers
+
+Leetcode tag: Graph
+
+Open Source: Contribute to LLVM’s open bug list
+
+🛠️ TOOLCHAIN TO MASTER
+Tool	Purpose
+C++ STL	Quick graph prototypes
+LLVM	Real-world compiler infrastructure
+Clang	Frontend to generate LLVM IR
+Graphviz	Visualize CFGs and IR
+godbolt.org	Explore assembly/codegen from C++
+CMake	Build LLVM passes/projects
